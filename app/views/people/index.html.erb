@@ -1,0 +1,5 @@
+<%= form_with(model: @person, local: true) do |f| %>
+  <%= f.text_field :age, placeholder: "年齢" %>
+  <%= f.text_field :child, placeholder: "子どもの数" %>
+  <%= f.submit "次へ" %>
+<% end %>
