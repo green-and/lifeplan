@@ -1,0 +1,4 @@
+<%= form_with(model: @income, local: true) do |f| %>
+  <%= f.text_field :salary, placeholder: "年収" %>
+  <%= f.submit "次へ" %>
+<% end %>
