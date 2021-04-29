@@ -4,6 +4,7 @@ class PeopleController < ApplicationController
   end
   def create
     Person.create(person_params)
+    redirect_to controller: :incomes, action: :index
   end
 
   private
