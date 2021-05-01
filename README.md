@@ -1,24 +1,47 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## persons テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| age     | string | null: false |
+| partner    | integer | null: false |
+| child | string | null: false |
+### Association
 
-* Ruby version
+- has_one :income
+- has_one :expense
 
-* System dependencies
+## incomes テーブル
 
-* Configuration
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| salary     | integer | null: false |
+| other_income    | integer | null: false |
+### Association
 
-* Database creation
+- has_one :income
+- has_one :outgo
 
-* Database initialization
+## expenses テーブル
 
-* How to run the test suite
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| fixed_cost_month    | integer | null: false |
+| fixed_cost_year    | integer | null: false |
+| pleasure_cost | integer | null: false |
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_one :income
+- has_one :outgo
 
-* Deployment instructions
+## assets テーブル
 
-* ...
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| house     | integer | null: false |
+| stock    | integer | null: false |
+### Association
+
+- has_one :income
+- has_one :outgo
