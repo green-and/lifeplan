@@ -5,6 +5,7 @@ class IncomesController < ApplicationController
 
   def create
     Income.create(income_params)
+    redirect_to controller: :results, action: :result
   end
 
   private
