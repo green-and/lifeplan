@@ -1,9 +1,0 @@
-<h1>確認</h1>
-  <div>年齢</div>
-  <%= @person.age %>
-  <div>年収</div>
-  <%= @income.salary %>
-
-<%= form_with model:[@person, @income, @result], url: '/results', method: :post, local: true do |f| %>
-  <%= f.submit '計算する' %>
-<% end %>
